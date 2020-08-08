@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19-dars</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="list">
+    
+    <h1>To Do List</h1>
+    <input 
+        type="text" 
+        id="work" 
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="What would like to do"
+    >
+   
+    <ul id="user"></ul>
+  </div>
+  
+  <script type="text/javascript">
+  
+
+    work.onkeyup = function (event) {
+
+      if (event.keyCode === 13) {
+        const newLi = document.createElement("LI")
+        newLi.textContent = work.value
+        const newBtn = document.createElement("Button")
+        newBtn.textContent = "Done"
+
+      user.appendChild(newLi)
+      user.appendChild(newBtn)
+
+      work.value = ''
+
+      newBtn.onclick = function () {
+
+      newLi.remove()
+      newBtn.remove()
+      }
+      }
+    }
+  </script>
+</body>
+</html>
