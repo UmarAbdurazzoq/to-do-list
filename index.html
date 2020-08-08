@@ -9,6 +9,12 @@
 </head>
 <body>
   <main>
+     <div class="theme">
+    <button class="dark" id="dark" type="button"></button>
+    <button class="yellow" id="yellow" type="button"></button>
+    <button class="cyan" id="cyan" type="button"></button>
+  </div>
+
     <div class="list">
       
       <h1>To Do List</h1>
@@ -27,8 +33,10 @@
   <script type="text/javascript">
 
     const work = document.querySelector('#work');
-    const buttons = document.querySelectorAll('button');
     const body = document.querySelector('body');
+    const darkButton = document.querySelector('#dark');
+    const yellowButton = document.querySelector('#yellow');
+    const cyanButton = document.querySelector('#cyan');
 
     work.onkeyup = function (event) {
 
@@ -49,6 +57,22 @@
       newBtn.remove()
       }
       }
+    }
+
+    darkButton.onclick = function () {
+      body.classList.remove('yellow');
+      body.classList.remove('cyan');
+      body.classList.add('dark');
+    }
+    yellowButton.onclick = function () {
+      body.classList.remove('cyan');
+      body.classList.remove('dark');
+      body.classList.add('yellow');
+    }
+    cyanButton.onclick = function () {
+      body.classList.remove('yellow');
+      body.classList.remove('dark');
+      body.classList.add('cyan');
     }
   </script>
 </body>

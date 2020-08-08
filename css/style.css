@@ -55,5 +55,32 @@ main{
   width: 650px;
   margin-left: auto;
   margin-right: auto;
-
 }
+.dark-theme, .dark{
+  background-color: #000;
+}
+.yellow-theme, .yellow{
+  background-color: yellow;
+}
+.cyan-theme, .cyan{
+  background-color: cyan;
+}
+.theme{
+  width: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: 35px;
+}
+.theme button{
+  box-shadow: 0 0 10px rgb(255, 129, 129);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+}
+
