@@ -21,7 +21,7 @@ body{
   display: flex;
   flex-direction: column;
   padding: 25px;
-  max-width: 450px;
+  max-width: 600px;
   min-height: 500px;
   max-height: 550px;
   overflow: hidden;
@@ -43,7 +43,7 @@ body{
   overflow-wrap: break-word;
 }
 .list button{
-  margin-left: 250px;
+  margin-left: 400px;
   min-width: 75px;
   border: none;
   border-radius: 5px;
