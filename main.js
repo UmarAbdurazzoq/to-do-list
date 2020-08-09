@@ -6,7 +6,7 @@ const cyanButton = document.querySelector('#cyan');
 const redButton = document.querySelector('#red');
 const reco = document.querySelector('#recog')
 const rec = new webkitSpeechRecognition()
-const answer = confirm("ovoz orqali To Do Listga qo'shish uchun rec tugmasini bosing! va fon rangini o'zgartirish uchun tanlagan rangizga 'rang' so'zini qo'shib ayting")
+const answer = confirm("ovoz orqali To Do Listga qo'shish uchun rec tugmasini bosing! va fon rangini o'zgartirish uchun tanlagan rangizga 'rang' so'zini qo'shib ayting hozircha faqat tabloda berilgan ranglar bor :)")
 rec.lang = 'uz-UZ'
 console.log(answer)
 rec.onend = function () {
