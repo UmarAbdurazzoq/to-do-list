@@ -3,6 +3,7 @@ const body = document.querySelector('body');
 const darkButton = document.querySelector('#dark');
 const yellowButton = document.querySelector('#yellow');
 const cyanButton = document.querySelector('#cyan');
+const redButton = document.querySelector('#red');
 const reco = document.querySelector('#recog')
 const rec = new webkitSpeechRecognition()
 const answer = confirm("ovoz orqali To Do Listga qo'shish uchun rec tugmasini bosing")
@@ -17,6 +18,16 @@ rec.onresult = function (events) {
 
   const buyruq = events.results[0][0].transcript
   console.log(buyruq)
+  
+  if (buyruq === 'qizil rang') {
+    body.style.backgroundColor = 'red'
+  } else if (buyruq === 'sariq rang') {
+    body.style.backgroundColor = 'yellow'
+  } else if (buyruq === 'qora rang') {
+    body.style.backgroundColor = 'black'
+  }else if (buyruq === "kok rang") {
+    body.style.backgroundColor = 'cyan'
+  } else {
 
   const newLi = document.createElement("LI")
   newLi.textContent = events.results[0][0].transcript
@@ -32,6 +43,7 @@ newBtn.onclick = function () {
 
 newLi.remove()
 newBtn.remove()
+}
 }
 }
  
@@ -75,17 +87,14 @@ work.onkeyup = function (event) {
 }
 
 darkButton.onclick = function () {
-  body.classList.remove('yellow');
-  body.classList.remove('cyan');
-  body.classList.add('dark');
+  body.style.backgroundColor = 'black'
 }
 yellowButton.onclick = function () {
-  body.classList.remove('cyan');
-  body.classList.remove('dark');
-  body.classList.add('yellow');
+  body.style.backgroundColor = 'yellow'
 }
 cyanButton.onclick = function () {
-  body.classList.remove('yellow');
-  body.classList.remove('dark');
-  body.classList.add('cyan');
+  body.style.backgroundColor = 'cyan'
+}
+redButton.onclick = function () {
+  body.style.backgroundColor = 'red'
 }

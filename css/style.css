@@ -78,6 +78,9 @@ main{
 .cyan-theme, .cyan{
   background-color: cyan;
 }
+.red{
+  background-color: red;
+}
 .theme{
   width: 80px;
   display: flex;
