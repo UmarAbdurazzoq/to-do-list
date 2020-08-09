@@ -67,7 +67,7 @@ reco.onclick = function (events) {
 work.onkeyup = function (event) {
   
 
-  if (event.keyCode === 13) {
+  if (event.keyCode === 13 && work.value.length>0) {
     const newLi = document.createElement("LI")
     newLi.textContent = work.value
     const newBtn = document.createElement("Button")
